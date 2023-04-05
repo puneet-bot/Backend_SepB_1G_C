@@ -1,6 +1,10 @@
 const port                  =           8000;
 const express               =           require('express');
 const app                   =           express();
+const db                    =           require('./config/mongoose');
+
+app.set('view engine','ejs');
+app.set('views','./views');
 
 app.use('/',require('./routes'));
 
