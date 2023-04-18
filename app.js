@@ -4,11 +4,13 @@ const express               =           require('express');
 const app                   =           express();
 const db                    =           require('./config/mongoose');
 const passport              =           require('passport');
+const cookieParser          =           require('cookie-parser');
 const passportLocal         =           require('./config/passport-local');
 const expressLayouts        =           require('express-ejs-layouts');
 const session               =           require('express-session');
 const mongoStore            =           require('connect-mongo');
 
+app.use(cookieParser());
 // To parse http data
 app.use(express.urlencoded({extended:false}));
 
