@@ -9,6 +9,18 @@ const passportLocal         =           require('./config/passport-local');
 const expressLayouts        =           require('express-ejs-layouts');
 const session               =           require('express-session');
 const mongoStore            =           require('connect-mongo');
+const sassMiddleware        =           require('node-sass-middleware');
+const path                  =           require('path');
+
+//configuration to set node-sass
+app.use(sassMiddleware({
+    /* Options */
+    src: path.join(__dirname, 'Assets', 'scss')
+  , dest: path.join(__dirname, 'Assets', 'css')
+  , debug: true
+  , outputStyle: 'extended'
+  , prefix:  '/css'
+}));
 
 app.use(cookieParser());
 // To parse http data
