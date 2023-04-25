@@ -5,3 +5,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   right: 50px; }
+
+.modal-lg {
+  max-width: 90%; }

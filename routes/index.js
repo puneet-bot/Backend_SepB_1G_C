@@ -9,6 +9,7 @@ router.use('/signout',require('./signout'))
 router.get('/newCampground',function (req,res){
     res.render("Create_Camp")
 });
+router.use('/func',require('./func'));
 router.post('/addCamp',async function(req,res){
     console.log("kkk",req.body);
     let camp=await campModel.create({
