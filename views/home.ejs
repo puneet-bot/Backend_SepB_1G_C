@@ -12,9 +12,10 @@
           <h5 class="card-title"><%=camp.title%></h5>
           <p class="card-text"><%=camp.description%></p>
           <a href="#" class="btn btn-primary"> <%=camp.location%> </a>
+          <%= camp%>
           <span>
             <%# Edit %>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Edit</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<%= camp.id %>" data-bs-whatever="@getbootstrap">Edit</button>
             <%- include('edit.ejs') %>
 
             <form method="POST" action="/func/delete">
