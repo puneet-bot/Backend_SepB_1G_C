@@ -7,7 +7,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form action="/func/edit" method="POST">
+          <form id="yelpcamp-form-<%=camp.id%>" action="/func/edit" method="POST">
             <input type="hidden" value="<%=camp.id%>" name="camp_id">
 
               <div class="mb-3">
@@ -44,7 +44,7 @@
                 </div>
                 <center>
                   <div class="col-auto">
-                      <button type="submit" class="btn btn-primary mb-3 btn-lg">Update Campground!</button>
+                      <button id="yelpcamp-edit-btn_<%=camp.id%>" type="submit" class="btn btn-primary mb-3 btn-lg" onclick="editCamp(this)">Update Campground!</button>
                     </div>
                 </center>
           </form>
