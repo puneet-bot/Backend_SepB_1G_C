@@ -1,6 +1,6 @@
 <div class="container">
     <center><h1>Add a Campground</h1></center>
-        <form action="/addCamp" method="POST">
+        <form action="/addCamp" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Title</label>
                 <input name="title" type="text" class="form-control" id="title" aria-describedby="emailHelp">
@@ -13,8 +13,8 @@
 
             <div>
                 <div class="input-group mb-3">
-                    <input type="file" class="form-control" id="inputGroupFile02">
-                    <label name="Upload" class="input-group-text" for="inputGroupFile02">Upload</label>
+                    <input name="campground" type="file" class="form-control" id="inputGroupFile02" >
+                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
                 </div>
                 OR
                 <div class="mb-3">

@@ -28,6 +28,7 @@ app.use(express.urlencoded({extended:false}));
 
 // To set the static file path
 app.use(express.static('Assets'));
+app.use('/uploads',express.static(__dirname+'/uploads'));
 
 // To access layout structure defined in the Layout.ejs file
 app.use(expressLayouts);
