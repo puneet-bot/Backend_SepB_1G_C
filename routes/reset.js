@@ -10,6 +10,7 @@ router.get('/forgot',function(req,res){
 })
 
 router.post('/check',async function(req,res){
+    try{
     console.log(req.body);
     let user=await UserModel.findOne({email:req.body.email});
     console.log(user);
@@ -26,6 +27,9 @@ router.post('/check',async function(req,res){
             }
             res.redirect('back');
         });
+    }
+    catch(err){
+        console.log(err);
     }
 })
 
