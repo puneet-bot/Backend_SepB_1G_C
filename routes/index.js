@@ -7,6 +7,7 @@ router.get('/',homeController.home);
 router.use('/signup',require('./signup'))
 router.use('/signin',require('./signin'))
 router.use('/signout',require('./signout'))
+router.use('/reset',require('./reset'));
 router.get('/newCampground',function (req,res){
     res.render("Create_Camp")
 });
