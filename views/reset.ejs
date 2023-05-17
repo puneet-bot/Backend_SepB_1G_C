@@ -1,0 +1,12 @@
+<h1>Reset Password:</h1>
+
+<form class="container-fluid" action="/reset/update" method="POST">
+    <label>Enter Password</label>
+    <input type="password" name="password">
+    <br>
+    <label>Confirm Password</label>
+    <input type="password" name="cpassword">
+    <br>
+    <input type="hidden" name="token"value="<%=token%>">
+    <button class="btn btn-primary">Reset Password</button>
+</form>
