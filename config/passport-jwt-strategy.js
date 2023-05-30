@@ -10,14 +10,11 @@ let opts={
     secretOrKey:secret.SecretAPIKey
 }
 
-passport.use(new JWTStrategy(opts,function(jwtPayLoad,done){
-    console.log('here in JWT Strategy')
-    User.findById(jwtPayLoad._id,function(err,user){
-        console.log('user', user);
-    if(err){console.log(err); return;}
+passport.use(new JWTStrategy(opts,async function(jwtPayLoad,done){
+    let user=await User.findById(jwtPayLoad._id);
+    console.log('hdfsjh',user);
     if(user){return done(null,user);}
     else{return done(null,false);}
-    })
     
 }));
 
