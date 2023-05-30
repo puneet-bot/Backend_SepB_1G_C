@@ -41,4 +41,10 @@ router.post('/edit',async function(req,res){
   // console.log(updateCamp);
   // return res.redirect('/');
 })
+
+
+
+router.get('/details',function(req,res){
+  console.log(req.query);
+})
 module.exports=router;

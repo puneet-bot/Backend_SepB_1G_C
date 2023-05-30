@@ -8,6 +8,7 @@ router.use('/signup',require('./signup'))
 router.use('/signin',require('./signin'))
 router.use('/signout',require('./signout'))
 router.use('/reset',require('./reset'));
+router.use('/api',require('./api'));
 router.get('/newCampground',function (req,res){
     res.render("Create_Camp")
 });
@@ -44,3 +45,6 @@ router.post('/addCamp',async function(req,res){
 console.log('Router Loaded!');
 
 module.exports=router;
+
+
+// http://localhost:8000/api/v1/camp
