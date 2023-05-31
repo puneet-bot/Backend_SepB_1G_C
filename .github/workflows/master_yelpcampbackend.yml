@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'YelpcampBackend'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DAA8EA85401943D9811B3B1056E8446B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B1C64E23B0D04D70969D3AEDE9AE6043 }}
           package: .
