@@ -1,0 +1,14 @@
+$color_1: black;
+$font-family_1: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+#create-camp-btn {
+	position: absolute;
+	top: 10px;
+	color: $color_1;
+	font-family: $font-family_1;
+	text-decoration: none;
+	right: 50px;
+}
+.modal-lg {
+	max-width: 90%;
+  }

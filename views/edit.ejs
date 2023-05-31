@@ -1,0 +1,58 @@
+<div class="modal fade" id="exampleModal<%= camp.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Campground</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="yelpcamp-form-<%=camp.id%>" action="/func/edit" method="POST">
+            <input type="hidden" value="<%=camp.id%>" name="camp_id">
+
+              <div class="mb-3">
+                <%= camp %>
+                  <label for="exampleInputEmail1" class="form-label">Title</label>
+                  <input name="title" type="text" value="<%= camp.title %>"  class="form-control" id="title" aria-describedby="emailHelp">
+                </div>
+  
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                  <textarea name="textarea" class="form-control" value="mmm" id="exampleFormControlTextarea1" rows="3"><%= camp.description %></textarea>
+                </div>
+              <div>
+                  <div class="input-group mb-3">
+                      <input type="file" class="form-control" id="inputGroupFile02">
+                      <label name="Upload" class="input-group-text" for="inputGroupFile02">Upload</label>
+                  </div>
+                  OR
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Image Link</label>
+                      <input name="Upload2" type="text" value="<%=camp.image%>" class="form-control" id="imageLink" aria-describedby="emailHelp">
+                  </div>
+              </div>
+  
+              <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <span class="input-group-text">0.00</span>
+                  <input name="Price" value="<%=camp.price%>" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+              </div>
+  
+              <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Location</label>
+                <input name="location" type="text" value="<%=camp.location%>" class="form-control" id="imageLink" aria-describedby="emailHelp">
+                </div>
+                <center>
+                  <div class="col-auto">
+                      <button id="yelpcamp-edit-btn_<%=camp.id%>" type="submit" class="btn btn-primary mb-3 btn-lg" onclick="editCamp(this)">Update Campground!</button>
+                    </div>
+                </center>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<hr>

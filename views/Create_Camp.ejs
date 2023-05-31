@@ -1,0 +1,44 @@
+<div class="container">
+    <center><h1>Add a Campground</h1></center>
+        <form action="/addCamp" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Title</label>
+                <input name="title" type="text" class="form-control" id="title" aria-describedby="emailHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                <textarea name="textarea" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+
+            <div>
+                <div class="input-group mb-3">
+                    <input name="campground" type="file" class="form-control" id="inputGroupFile02" >
+                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                </div>
+                OR
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Image Link</label>
+                    <input name="Upload2" type="text" class="form-control" id="imageLink" aria-describedby="emailHelp">
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">$</span>
+                <span class="input-group-text">0.00</span>
+                <input name="Price" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Location</label>
+                <input name="location" type="text" class="form-control" id="imageLink" aria-describedby="emailHelp">
+              </div>
+              <center>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3 btn-lg">Create Campground!</button>
+                  </div>
+              </center>
+        </form>
+</div>
+
+<link rel="stylesheet" href="css/camp.css">
